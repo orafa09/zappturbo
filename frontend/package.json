@@ -91,3 +91,120 @@ export default function Home() {
     </>
   )
 }
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+export default function Servicos() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-5xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6">Nossos Serviços</h1>
+        <ul className="space-y-4">
+          <li className="bg-white shadow-md rounded-xl p-4">Automação de mensagens pelo WhatsApp</li>
+          <li className="bg-white shadow-md rounded-xl p-4">Criação de funis automatizados de vendas</li>
+          <li className="bg-white shadow-md rounded-xl p-4">Relatórios de desempenho das campanhas</li>
+        </ul>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function Precos() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-4xl mx-auto text-center">
+        <h1 className="text-3xl font-bold mb-6">Planos e Preços</h1>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white shadow-md rounded-2xl p-6">
+            <h2 className="text-xl font-bold mb-2">Plano Básico</h2>
+            <p className="mb-4">R$49,90/mês</p>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-xl">Assinar</button>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function Contato() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6">Fale Conosco</h1>
+        <form className="space-y-4">
+          <input type="text" placeholder="Seu nome" className="w-full p-3 rounded-md border" />
+          <input type="email" placeholder="Seu e-mail" className="w-full p-3 rounded-md border" />
+          <textarea placeholder="Sua mensagem" className="w-full p-3 rounded-md border h-32" />
+          <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-md">Enviar</button>
+        </form>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function Login() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-md mx-auto">
+        <h1 className="text-3xl font-bold mb-6 text-center">Entrar</h1>
+        <form className="space-y-4">
+          <input type="email" placeholder="E-mail" className="w-full p-3 rounded-md border" />
+          <input type="password" placeholder="Senha" className="w-full p-3 rounded-md border" />
+          <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-md w-full">Entrar</button>
+        </form>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function Cadastro() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-md mx-auto">
+        <h1 className="text-3xl font-bold mb-6 text-center">Criar Conta</h1>
+        <form className="space-y-4">
+          <input type="text" placeholder="Nome" className="w-full p-3 rounded-md border" />
+          <input type="email" placeholder="E-mail" className="w-full p-3 rounded-md border" />
+          <input type="password" placeholder="Senha" className="w-full p-3 rounded-md border" />
+          <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded-md w-full">Cadastrar</button>
+        </form>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function TermosDeUso() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6">Termos de Uso</h1>
+        <p className="text-gray-700">Esses são os termos de uso do ZappTurbo. Ao utilizar o site, você concorda com essas condições...</p>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export function PoliticaPrivacidade() {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-20 px-6 py-12 max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6">Política de Privacidade</h1>
+        <p className="text-gray-700">Suas informações estão protegidas conosco. Coletamos dados apenas para melhorar sua experiência...</p>
+      </main>
+      <Footer />
+    </>
+  );
+}
