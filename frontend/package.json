@@ -1,0 +1,93 @@
+frontend/package.json
+{
+  "name": "zappturbo-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.24"
+  }
+}
+module.exports = {
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+}module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
+import Link from 'next/link';
+
+export default function Navbar() {
+  return (
+    <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-blue-600 font-bold text-xl">ZappTurbo</div>
+        <ul className="flex gap-6">
+          <li><Link href="/"><a className="hover:text-blue-700">Home</a></Link></li>
+          <li><Link href="/servicos"><a className="hover:text-blue-700">Serviços</a></Link></li>
+          <li><Link href="/precos"><a className="hover:text-blue-700">Preços</a></Link></li>
+          <li><Link href="/contato"><a className="hover:text-blue-700">Contato</a></Link></li>
+          <li><Link href="/login"><a className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a></Link></li>
+          <li><Link href="/cadastro"><a className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Comece Grátis</a></Link></li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
+export default function Footer() {
+  return (
+    <footer className="bg-gray-100 text-gray-700 py-8 mt-16">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between">
+        <p>© 2025 ZappTurbo. Todos os direitos reservados.</p>
+        <div className="flex gap-4">
+          <a href="#" aria-label="Facebook" className="hover:text-blue-600">Facebook</a>
+          <a href="#" aria-label="Twitter" className="hover:text-blue-600">Twitter</a>
+          <a href="#" aria-label="LinkedIn" className="hover:text-blue-600">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <section className="bg-blue-600 text-white text-center py-20 mt-16">
+        <h1 className="text-4xl font-bold">Automação de WhatsApp com ZappTurbo</h1>
+        <p className="mt-4">Envie mensagens, crie funis e automatize suas vendas com facilidade</p>
+        <button className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-xl">Teste Grátis por 7 Dias</button>
+      </section>
+      <section className="py-16 px-8 grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-md p-6">Benefício 1</div>
+        <div className="bg-white rounded-2xl shadow-md p-6">Benefício 2</div>
+        <div className="bg-white rounded-2xl shadow-md p-6">Benefício 3</div>
+      </section>
+      <Footer />
+    </>
+  )
+}
