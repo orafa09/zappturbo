@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login HyperSales AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" style="max-width:450px;margin:100px auto;padding:20px;background:#080808;border-radius:20px;border:1px solid #0f0f0f;box-shadow:0 0 20px #000;">
+  <h1>Login HyperSales AI</h1>
+  <input type="email" id="email" placeholder="Seu email">
+  <input type="text" id="key" placeholder="Chave de acesso">
+  <button onclick="login()">Entrar</button>
+</div>
+
+<script>
+function login(){
+  const email = document.getElementById('email').value;
+  const key = document.getElementById('key').value;
+  
+  const keys = {
+    "starter@example.com":"STARTER123",
+    "pro@example.com":"PRO456",
+    "elite@example.com":"ELITE789"
+  };
+  
+  if(keys[email] && keys[email] === key){
+    localStorage.setItem('user', email);
+    window.location.href='painel.html';
+  } else {
+    alert("Email ou chave inválidos!");
+  }
+}
+</script>
+
+</body>
+</html>
