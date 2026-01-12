@@ -1,0 +1,128 @@
+/* Estilo geral */
+body{
+  margin:0;
+  font-family:Inter, Arial, Helvetica, sans-serif;
+  background:#020202;
+  color:white;
+}
+*{box-sizing:border-box;}
+a{text-decoration:none;color:white;}
+
+/* Containers */
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+.logo{
+  font-size:24px;
+  font-weight:900;
+  color:#00ff9c;
+  letter-spacing:1px;
+}
+nav .cta, .bigcta, .plan button{
+  background:#00ff9c;
+  border:0;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:bold;
+  cursor:pointer;
+}
+nav .cta:hover, .bigcta:hover, .plan button:hover{
+  filter:brightness(1.1);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:45px 0;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.2;
+}
+.hero span{
+  color:#00ff9c;
+}
+.hero p{
+  opacity:.85;
+  max-width:780px;
+  margin:auto;
+  font-size:17px;
+  margin-top:10px;
+}
+
+/* SECTIONS */
+.section{
+  background:#080808;
+  padding:24px;
+  margin:20px 0;
+  border-radius:26px;
+  border:1px solid #0f0f0f;
+  box-shadow:0 0 30px #000;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
+}
+
+/* CARDS */
+.card{
+  background:#0b0b0b;
+  padding:18px;
+  border-radius:18px;
+  border:1px solid #0f0f0f;
+  transition:.2s;
+}
+.card:hover{
+  border-color:#00ff9c;
+  transform:translateY(-3px);
+}
+
+/* PLANS */
+.plan{
+  background:#050505;
+  padding:18px;
+  border-radius:22px;
+  border:1px solid #0f0f0f;
+}
+.plan h3{
+  color:#00ff9c;
+  margin:5px 0;
+}
+.price{
+  font-size:28px;
+  font-weight:900;
+  margin:5px 0 10px 0;
+}
+
+/* CTA FINAL */
+.bigcta{
+  padding:15px 24px;
+  border-radius:16px;
+  border:0;
+  font-size:17px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px;
+  opacity:.6;
+}
+
+/* PAINEL */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px;}
+header h1{color:#00ff9c;}
