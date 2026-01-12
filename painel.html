@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard HyperSales AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Dashboard HyperSales AI</h1>
+  <button onclick="logout()">Sair</button>
+</header>
+
+<div class="grid" style="padding:20px;">
+  <div class="card">
+    <h2>Leads gerados</h2>
+    <p id="leads">0</p>
+  </div>
+  <div class="card">
+    <h2>Taxa de conversão</h2>
+    <p id="conversao">0%</p>
+  </div>
+  <div class="card">
+    <h2>Mensagens enviadas</h2>
+    <p id="mensagens">0</p>
+  </div>
+  <div class="card">
+    <h2>Funis ativos</h2>
+    <p id="funis">0</p>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:20px;">
+  <button onclick="window.location.href='https://wa.me/5519995903691'">Falar com especialista</button>
+</div>
+
+<script>
+if(!localStorage.getItem('user')){
+  window.location.href='painel-login.html';
+}
+
+let leads=0, conversao=0, mensagens=0, funis=0;
+function animar(){
+  if(leads<120) leads++;
+  if(conversao<35) conversao++;
+  if(mensagens<540) mensagens+=5;
+  if(funis<3) funis++;
+  
+  document.getElementById('leads').innerText=leads;
+  document.getElementById('conversao').innerText=conversao+'%';
+  document.getElementById('mensagens').innerText=mensagens;
+  document.getElementById('funis').innerText=funis;
+  
+  if(leads<120||conversao<35||mensagens<540||funis<3){
+    requestAnimationFrame(animar);
+  }
+}
+animar();
+
+function logout(){
+  localStorage.removeItem('user');
+  window.location.href='painel-login.html';
+}
+</script>
+
+</body>
+</html>
